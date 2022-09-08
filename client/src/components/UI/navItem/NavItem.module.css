@@ -1,0 +1,13 @@
+.myNavItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9a9c9e;
+    text-decoration: none;
+    margin: 7px;
+}
+
+.myNavItem:hover {
+    color: #d3d0d0;
+    transition: 0.2s;
+}

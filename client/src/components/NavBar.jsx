@@ -1,6 +1,8 @@
 import React from 'react';
 import {Container ,Navbar, Nav} from "react-bootstrap"
 import {Link, Routes} from "react-router-dom";
+import NavItem from "./UI/navItem/NavItem";
+
 const NavBar = () => {
     return (
 
@@ -13,7 +15,8 @@ const NavBar = () => {
 
                             {/*<Nav.Link><Link to="/main">Main</Link></Nav.Link>
                             <Nav.Link><Link to="/configured">Configured</Link></Nav.Link>*/}
-                            <Nav.Item><Link to="/configured">Configured</Link></Nav.Item>
+                            {/*<Nav.Item><Link to="/configured">Configured</Link></Nav.Item>*/}
+                            <NavItem newLink = {"/mai"}>Что то</NavItem>
                             <Nav.Link href="#pricing">Pricing</Nav.Link>
                         </Nav>
                     </Container>
