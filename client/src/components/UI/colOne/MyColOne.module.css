@@ -1,0 +1,9 @@
+.myColOne {
+    background-color: #f8f8f8;
+    margin-top: 10px;
+    height: 90vh;
+    border-radius: 5px;
+    justify-content: center;
+    box-shadow: 0 0 10px #c7c7c7;
+
+}

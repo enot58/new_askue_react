@@ -1,0 +1,22 @@
+.testOne {
+    display: flex;
+    box-sizing: border-box;
+    width: 97%;
+    min-height: 40px;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.testOne:hover {
+    background-color: green;
+}
+
+
+.testOne:active {
+    background-color: red;
+}
