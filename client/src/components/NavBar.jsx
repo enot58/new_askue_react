@@ -9,15 +9,13 @@ const NavBar = () => {
 
                 <Navbar bg="dark" variant="dark">
                     <Container>
-                        <Navbar.Brand><Link to="/main">Main</Link></Navbar.Brand>
+                        <Navbar.Brand><Link to="/main">Logo</Link></Navbar.Brand>
                         <Nav className="me-auto">
-                            <Link to="/main">Main</Link>
-
-                            {/*<Nav.Link><Link to="/main">Main</Link></Nav.Link>
-                            <Nav.Link><Link to="/configured">Configured</Link></Nav.Link>*/}
-                            {/*<Nav.Item><Link to="/configured">Configured</Link></Nav.Item>*/}
-                            <NavItem newLink = {"/mai"}>Что то</NavItem>
-                            <Nav.Link href="#pricing">Pricing</Nav.Link>
+                            <NavItem newLink = {"/main"}>Главная</NavItem>
+                            <NavItem newLink = {"/admin"}>Админ панель</NavItem>
+                            <NavItem newLink = {"/chat"}>Чат</NavItem>
+                            <NavItem newLink = {"/disk"}>Диск</NavItem>
+                            {/* <Link to="/main">Main</Link> */}
                         </Nav>
                     </Container>
                 </Navbar>
