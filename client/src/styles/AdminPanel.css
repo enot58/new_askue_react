@@ -1,0 +1,60 @@
+.adminPanel {
+    width: 100%;
+    height: 92.5vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.pageAdminPanel {
+    display: flex;
+    flex-direction: row;
+    background-color: green;
+    width: 100%;
+    height: 100%;
+}
+
+.Sidebar {
+    height: 100%;
+    width: 200px;
+    background-color: #212529;
+    justify-content: center;
+    display: flex;
+}
+
+.SidebarList {
+    height: auto;
+    padding: 0;
+    width: 100%;
+}
+
+.SidebarList .rowList {
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    list-style-type: none;
+    margin: 0%;
+    display: flex;
+    flex-direction: row;
+    color: #808080;
+    justify-content: center;
+    align-items: center;
+}
+
+.SidebarList :hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.SidebarList #active {
+    background-color: #d3d1d1;
+}
+
+.rowList #icon {
+    flex: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.rowList #title {
+    flex: 70%;
+}
