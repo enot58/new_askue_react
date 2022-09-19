@@ -7,39 +7,49 @@ import SideBarItem from "../components/SideBar/SideBarItem";
 
 const AdminPanel = () => {
 
+    const [itemAdminPanel, setItemAdminPanel] = useState([
+        {
+            id: 1,
+            newLink: '/admin',
+            title: "Админ 1",
+        },
+        {
+            id: 2,
+            newLink: '/admin',
+            title: "Админ 2",
+        },
+        {
+            id: 3,
+            newLink: '/admin',
+            title: "Админ 3",
+        }
+    ])
+
     const [newActive, setNewActive] = useState(false)
 
-    const selectActive = () => {
+
+
+    const onSelectActive = (id, active) => {
         
-        console.log(newActive)
-        
-        if (newActive === false ) {
-          setNewActive(true)
-        } else {
-          setNewActive(false)
-        }
-  
+
+        const newItem = itemAdminPanel.map((itemAdmin) => 
+            itemAdmin.id === id ? {...itemAdmin, active} : itemAdmin
+        )
+        setItemAdminPanel(newItem)
+        console.log(newItem)
+        console.log(itemAdminPanel)
+         
     }
 
     return (
         <div>
             <SideBar>
-                {/* <ListGroup.Item><NavItem newLink = {"/main"}>Главная</NavItem></ListGroup.Item>
-                <ListGroup.Item>dsafdsf</ListGroup.Item>
-                <ListGroup.Item>dsafdsf</ListGroup.Item>
-                <ListGroup.Item>dsafdsf</ListGroup.Item> */}
-                <SideBarItem newActive setNewActive newLink = {'/admin'}>
-                    sadfdsffdgdgf
-                </SideBarItem>
-
-                <SideBarItem newLink = {'/admin'}>
-                    sadfdsffdgdgf
-                </SideBarItem>
-                <SideBarItem newLink = {'/admin'}>
-                    sadfdsffdgdgf
-                </SideBarItem>
-               
-                
+                               
+                {itemAdminPanel.map((item) => (
+                    <SideBarItem key={item.id} {...item} onActiveClick = {active => onSelectActive()} newLink = {item.newLink} active={item.title}>
+                        {item.title}
+                    </SideBarItem>
+                ))}
 
                 
             </SideBar>

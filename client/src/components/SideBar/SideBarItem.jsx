@@ -6,27 +6,13 @@ import classes from "./SideBarItem.module.css"
 import {ListGroupItem} from "react-bootstrap";
 
 
-function SideBarItem(props) {
-
-  // const [newActive, setNewActive] = useState(false)
-
-  // const selectActive = () => {
-      
-  //     console.log(newActive)
-      
-  //     if (newActive === false ) {
-  //       setNewActive(true)
-  //     } else {
-  //       setNewActive(false)
-  //     }
-
-  // }
+function SideBarItem({id, title, newLink, active, onActiveClick = f => f}) {
 
   return (
 
-       <ListGroupItem onClick={props.setNewActive} active={props.newActive}>
-          <Link className={classes.newSideBarItem} to={props.newLink}>
-            {props.children}
+       <ListGroupItem onClick={() => onActiveClick(id)}>
+          <Link className={classes.newSideBarItem} to={newLink}>
+            {title}
           </Link>
        </ListGroupItem> 
 
