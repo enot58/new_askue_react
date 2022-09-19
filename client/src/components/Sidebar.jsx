@@ -1,6 +1,6 @@
 import React from 'react'
 import "../styles/AdminPanel.css"
-import { SideBarData } from './SideBarData'
+import {SideBarData} from "./SideBarData"
 
 function Sidebar() {
     return (
